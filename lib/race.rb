@@ -12,6 +12,9 @@ module RaceBet
           if gues == winners[index]
             sum = sum + calculate_correct_place[index]
           end
+          if winners.include?(gues) && gues != winners[index]
+            sum += 1
+          end
         end
         sum
       end
